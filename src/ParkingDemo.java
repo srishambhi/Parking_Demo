@@ -1,3 +1,4 @@
+package src;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -95,8 +96,9 @@ public class ParkingDemo {
 	@SuppressWarnings("unchecked")
 	public static void status() {
 		System.out.println("Slot No. Registration No.");
-		parkingMap.forEach((k, v) -> {
-			System.out.println(k + " " + v);
+		parkingMap.forEach((key, value) -> {
+			if(!value.equals(""))
+			System.out.println(key + " " + value);
 
 		});
 	}
